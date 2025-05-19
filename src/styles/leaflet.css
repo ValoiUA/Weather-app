@@ -1,0 +1,138 @@
+/* Required Leaflet CSS */
+.leaflet-pane,
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-tile-container,
+.leaflet-pane > svg,
+.leaflet-pane > canvas,
+.leaflet-zoom-box,
+.leaflet-image-layer,
+.leaflet-layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.leaflet-container {
+  overflow: hidden;
+  outline: none;
+  background: #1e293b; /* Dark background for better contrast */
+}
+
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.leaflet-tile {
+  filter: inherit;
+  visibility: hidden;
+}
+
+.leaflet-tile-loaded {
+  visibility: inherit;
+}
+
+.leaflet-zoom-box {
+  width: 0;
+  height: 0;
+  box-sizing: border-box;
+  z-index: 800;
+}
+
+.leaflet-overlay-pane svg {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.leaflet-tile-pane {
+  z-index: 200;
+}
+
+.leaflet-objects-pane {
+  z-index: 400;
+}
+
+.leaflet-overlay-pane {
+  z-index: 400;
+}
+
+.leaflet-shadow-pane {
+  z-index: 500;
+}
+
+.leaflet-marker-pane {
+  z-index: 600;
+}
+
+.leaflet-tooltip-pane {
+  z-index: 650;
+}
+
+.leaflet-popup-pane {
+  z-index: 700;
+}
+
+.leaflet-map-pane canvas {
+  z-index: 100;
+}
+
+.leaflet-map-pane svg {
+  z-index: 200;
+}
+
+.leaflet-vml-shape {
+  width: 1px;
+  height: 1px;
+}
+
+.leaflet-control {
+  position: relative;
+  z-index: 800;
+  pointer-events: visiblePainted;
+  pointer-events: auto;
+}
+
+/* Custom styles for dark theme */
+.leaflet-control-attribution {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  color: #e2e8f0 !important;
+}
+
+.leaflet-control-attribution a {
+  color: #60a5fa !important;
+}
+
+.leaflet-control-zoom {
+  border: 1px solid #334155 !important;
+  background-color: rgba(15, 23, 42, 0.8) !important;
+  border-radius: 4px !important;
+  overflow: hidden;
+}
+
+.leaflet-control-zoom a {
+  background-color: rgba(15, 23, 42, 0.8) !important;
+  color: #e2e8f0 !important;
+  border-bottom: 1px solid #334155 !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background-color: rgba(30, 41, 59, 0.8) !important;
+}
+
+.leaflet-control-zoom a.leaflet-disabled {
+  color: #64748b !important;
+  background-color: rgba(15, 23, 42, 0.5) !important;
+}
+
+/* Fix for Next.js image optimization */
+.leaflet-container img {
+  max-width: none !important;
+  max-height: none !important;
+}
